@@ -1,5 +1,32 @@
 {
+  "name": "learnbackend",
+  "version": "1.0.0",
+  "description": "a basic app to deploy",
+  "keywords": [
+    "node",
+    "rubik's",
+    "cube"
+  ],
+  "homepage": "https://github.com/ramakant921/Node-JavaScript-learn#readme",
+  "bugs": {
+    "url": "https://github.com/ramakant921/Node-JavaScript-learn/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramakant921/Node-JavaScript-learn.git"
+  },
+  "license": "ISC",
+  "author": "Ramakant Mishra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "dotenv": "^17.2.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
