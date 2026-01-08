@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import './App.css'
+
 function App() {
-  const [jokes,setJokes] = useState([])
+  const [jokes,setJokes] = useState([]);
 
   useEffect(() => {
     axios.get('/api/jokes')
     .then((response) => {
-      setJokes(response.data)
+      setJokes(response.data);
+        console.log(response);
     })
     .catch((error) => {
       console.log(error)
     })
-  })
+  },[]);
 
   return (
     <>
@@ -24,7 +24,7 @@ function App() {
       {
         jokes.map((joke)=>(
           <div key={joke.id}>
-            <h3>{jokes.title}</h3>
+            <h3>{joke.title}</h3>
             <p>{joke.content}</p>
           </div>
         ))
